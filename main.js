@@ -9,6 +9,13 @@ function btnClicked {
     let yC = +document.getElementById("yC").value;
 
     //Calculate For AB
+    document.getElementById("lengthAB").innerHTML = dist()
     //Calculate For AC
+    document.getElementById("lengthAC").innerHTML = dist()
     //Calculate For BC
+    document.getElementById("lengthBC").innerHTML = dist()
+}
+
+function dist() {
+
 }
