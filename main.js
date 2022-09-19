@@ -1,5 +1,9 @@
 // Triangle Perimeter Assignment Start Code
-function btnClicked {
+
+//Click Button Event
+document.getElementById("btn").addEventListener("click", btnClicked);
+
+function btnClicked() {
     //Determine Vertex Values
     let xA = +document.getElementById("xA").value;
     let yA = +document.getElementById("yA").value;
@@ -9,13 +13,20 @@ function btnClicked {
     let yC = +document.getElementById("yC").value;
 
     //Calculate For AB
-    document.getElementById("lengthAB").innerHTML = dist()
+    let distAB = dist(xA, yA, xB, yB);
+    document.getElementById("distAB").innerHTML = distAB
     //Calculate For AC
-    document.getElementById("lengthAC").innerHTML = dist()
+    let distAC = dist(xA, yA, xC, yC);
+    document.getElementById("distAC").innerHTML = distAC
     //Calculate For BC
-    document.getElementById("lengthBC").innerHTML = dist()
+    let distBC = dist(xB, yB, xC, yC);
+    document.getElementById("distBC").innerHTML = distBC
+    //Calculate Parimeter
+    document.getElementById('parimeterABC').innerHTML = distAB + distAC + distBC
 }
 
-function dist() {
-
+function dist(x1, y1, x2, y2) {
+    let dist = Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
+    return dist;
 }
+
